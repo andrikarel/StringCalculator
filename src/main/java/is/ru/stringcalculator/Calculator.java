@@ -13,12 +13,23 @@ public class Calculator
 		else if(text.contains(","))
 		{
 			String[] numbers = text.split(",");
-			return Integer.parseInt(numbers[0]) + Integer.parseInt(numbers[1]);
-
+			
+			return sumOfNums(numbers);
 		}
+
 		else
 			return 1;
 			
+	}
+
+	private static int sumOfNums(String[] numbers)
+	{
+		int sum = 0;
+		for(String nums : numbers)
+			{
+				sum += Integer.parseInt(nums);
+			}
+		return sum;
 	}
 
 	

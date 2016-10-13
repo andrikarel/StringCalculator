@@ -23,4 +23,10 @@ public class CalculatorTest
 	{
 		assertEquals(3, Calculator.add("1,2"));
 	}
+
+	@Test
+	public void testUnknownNumbers() 
+	{
+		assertEquals(3+5+12+44+75+23+2, Calculator.add("3,5,12,44,75,23,2"));
+	}
 }
