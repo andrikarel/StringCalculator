@@ -29,4 +29,10 @@ public class CalculatorTest
 	{
 		assertEquals(3+5+12+44+75+23+2, Calculator.add("3,5,12,44,75,23,2"));
 	}
+
+	@Test
+	public void testNewLine() 
+	{
+		assertEquals(3+3+3, Calculator.add("3\n3,3"));
+	}
 }
