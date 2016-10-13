@@ -14,7 +14,6 @@ public class Calculator
 		else if(text.contains(",") || text.contains("n"))
 		{
 			String[] numbers = text.split(",|\n");
-		
 			testIfNeg(numbers);
 			
 			return sumOfNums(numbers);
@@ -24,7 +23,6 @@ public class Calculator
 			return 1;
 			
 	}
-
 	private static void testIfNeg(String[] numbers)
 	{
 		List<String> negs = new ArrayList<String>();
@@ -49,7 +47,11 @@ public class Calculator
 		int sum = 0;
 		for(String nums : numbers)
 			{	
-				sum += Integer.parseInt(nums);
+				if(Integer.parseInt(nums) <= 1000)
+				{
+					sum += Integer.parseInt(nums);
+				}
+				
 			}
 		return sum;
 	}
