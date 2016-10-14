@@ -50,4 +50,10 @@ public class CalculatorTest
 	{
 		assertEquals(2, Calculator.add("1001,1003,2"));
 	}
+
+	@Test
+	public void testDelimeter() 
+	{
+		assertEquals(4+6, Calculator.add("//;\n4;6"));
+	}
 }

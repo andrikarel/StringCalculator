@@ -11,6 +11,16 @@ public class Calculator
 			return 0;
 		}
 			
+		else if(text.contains("//"))
+		{
+			String delim = text.substring(2,3);
+			text = text.substring(text.lastIndexOf("\n")+1);
+			
+			text.replace(",",delim);
+			text.replace("\n",delim);
+			String[] newNums = text.split(delim);
+			return sumOfNums(newNums);
+		}
 		else if(text.contains(",") || text.contains("n"))
 		{
 			String[] numbers = text.split(",|\n");
@@ -18,6 +28,7 @@ public class Calculator
 			
 			return sumOfNums(numbers);
 		}
+
 
 		else
 			return 1;
